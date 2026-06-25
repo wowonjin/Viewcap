@@ -1,0 +1,26 @@
+{
+  "name": "viewcap",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "db:generate": "npm run generate -w @viewcap/database",
+    "db:migrate": "npm run migrate -w @viewcap/database",
+    "db:seed": "npm run seed -w @viewcap/database",
+    "db:push": "npm run push -w @viewcap/database",
+    "db:setup:local": "npm run generate:sqlite -w @viewcap/database && npm run push:sqlite -w @viewcap/database && npm run seed:sqlite -w @viewcap/database"
+  },
+  "devDependencies": {
+    "turbo": "^2.5.4",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "npm@10.9.2"
+}

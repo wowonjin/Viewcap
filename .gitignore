@@ -10,5 +10,6 @@ coverage
 uploads
 tmp
 storage/
+.vercel
 packages/database/prisma/dev.db
 packages/database/prisma/*.db
